@@ -1,193 +1,470 @@
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  <title>Xin Li</title>
-
-  <meta name="author" content="Xin Li">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="KVQ: Kaleidoscope Video Quality Assessment for Short-form Videos.">
+  <meta name="keywords" content="KVQ, Short-form Videos, VQA">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KVQ: Kaleidoscope Video Quality Assessment for Short-form Videos</title>
 
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/png" href="images/xin.jpg">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
-
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Xin Li 李鑫</name>
-              </p>
-              <p>I am currently a Ph.D. Candidate in MOE-Microsoft Key Laboratory of Multimedia Computing and Communication, University of Science and Technology of China (USTC), supervised by  <a href="https://scholar.google.com/citations?user=1ayDJfsAAAAJ&hl=zh-CN">Zhibo Chen</a>. Prior to that, I obtained my  B.S. degree in Department of Electronic Engineering and Information Science from the University of Science and Technology of China (USTC). 
-                From Apr. 2021 to Apr. 2022, I was a research intern at Intelligence Media Group of MSRA under the supervision of <a href="https://scholar.google.com/citations?user=XZugqiwAAAAJ&hl=zh-CN">Cuiling Lan</a> and <a href="https://scholar.google.com/citations?user=_cUfvYQAAAAJ&hl=zh-CN">Wenjun Zeng</a>. 
-                And now, I am a visiting Ph.D. of Learning and Vision (LV) Lab at the National University of Singapore under the supervision of <a href="https://scholar.google.com/citations?user=w69Buq0AAAAJ&hl=en">Xinchao Wang</a>.  
-                My research interests mainly focus on image/video processing, computer vision, and machine learning, causal learning.
-              </p>
 
-              <p style="text-align:center">
-                <a href="mailto:lixin666@mail.ustc.edu.cn">Email: lixin666@mail.ustc.edu.cn</a> &nbsp;/&nbsp;
-<!--                <a href="data/JonBarron-CV.pdf">CV</a> &nbsp/&nbsp-->
-<!--                <a href="data/JonBarron-bio.txt">Bio</a> &nbsp/&nbsp-->
-                <a href="https://scholar.google.com/citations?user=sbiY97gAAAAJ&hl=zh-CN">Google Scholar</a> &nbsp;/&nbsp;
-                <a href="https://github.com/lixinustc">GitHub</a>
-                  <!--&nbsp;/&nbsp;
-<!--                <a href="https://twitter.com/jon_barron">Twitter</a> &nbsp/&nbsp-->
-<!--                <a href="https://github.com/jinx-USTC">Github</a> &nbsp/&nbsp-->
-              </p>
-            </td>
-            <td style="padding:2.5%;width:30%;max-width:30%">
-              <a href="images/JonBarron.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/xin.jpg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading><b>News!!!</b></heading> 
-	      <p></p><li><font color="red"><strong>[02/2024]  I am co-organizing the <a href="https://codalab.lisn.upsaclay.fr/competitions/17638">Short-form UGC Video Quality Assessment Challenge</a> jointly with the <a href="https://cvlai.net/ntire/2024/">9th NTIRE Workshop at CVPR 2024</a>~</strong></font><p></p>
-              <p></p><li> <font color="red"><strong>[01/2024] Invited as the reviewer for ECCV2024 ~</strong></font><p></p>
-              <p></p><li> <font color="red"><strong>[12/2023] Invited as the reviewer for ICML2024 ~</strong></font><p></p>
-              <p></p><li> <font color="red"><strong>[12/2023] Awarded IEEE VCIP Best Paper Award ~</strong></font><p></p>
-            <p></p><li> <font color="red"><strong>[09/2023] One paper accepted by IEEE TMM 2023 ~</strong></font><p></p>
-            <p></p><li> <font color="red"><strong>[09/2023] One paper accepted by NeurIPS2023 ~</strong></font><p></p>
-            <p></p><li> <font color="red"><strong>[02/2023] One paper accepted by CVPR2023 (The first paper for cauality-based IR)~</strong></font><p></p>
-            <p></p><li> <font color="red"><strong>[11/2022] One paper accepted by AAAI2023 Oral~</strong></font><p></p>
-			      <p></p><li> <font color="red"><strong>[10/2022]  Awarded ByteDance Scholarship 2022 （Ten Students in China）~</strong></font><p></p>
-			     <p></p><li> <font color="red"><strong>[08/2022]  One paper accepted by ECCV Workshop 2022~</strong></font><p></p>
-              <p></p><li> <font color="red"><strong>[07/2022]  Awarded China Scholarship Council (CSC) scholarship~</strong></font><p></p>
-              <p></p><li> <font color="red"><strong>[06/2022]  One paper accepted by IEEE TMM 2022~</strong></font><p></p>
-              <p></p><li> <font color="red"><strong>[06/2022]  One paper accepted by MICCAI 2022~</strong></font><p></p>
-              <p></p><li> <font color="red"><strong>[04/2022] First prize in 5th CVPR CLIC 2022 in Perceptual Metric Track~</strong></font><p></p>
-              <p></p></li><li><strong>[11/2021] </strong> One paper accepted by IEEE TIP 2021.<p></p>
-              <p></p></li><li><strong>[10/2021] </strong> Awarded China National Scholarship.<p></p>
-              <p></p></li><li><strong>[09/2021] </strong> One paper accepted by IEEE TCSVT 2021.<p></p>
-              <p></p></li><li><strong>[06/2021] </strong> One paper accepted by IEEE TIP 2021.<p></p>
-              <p></p></li><li><strong>[11/2020] </strong> One papers accepted by AAAI 2021.<p></p>
-              <p></p></li><li><strong>[08/2020] </strong> One paper accepted by ECCV Workshop 2020.<p></p>
-              <p></p></li><li><strong>[06/2020] </strong> Two papers accepted by ECCV 2020.<p></p>
-              <p></p></li><li><strong>[03/2020] </strong> One paper accepted by CVPR Workshop 2020.<p></p>
-              <p></p></li><li><font color="red"><strong>[01/2020] The third prize in the 2019 4K+HDR National Artificial Intelligence Competition. (3/1000+)<strong></font>.<p></p>
-<!--              <p><li><strong>[09/2019] </strong> One paper accepted by NeurIPS 2019.</p>-->
-<!--              <p><li><strong>[11/2018] </strong> Awarded the Huawei Scholarship (¥8000).</p>-->
-            </li></td>
-          </tr>
-        </tbody></table>
-        
-        <heading><b>Publications</b></heading>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+        <!--   <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape -->
+          </a>
+        </div>
+      </div>
+    </div>
 
-      <ul>
-        <li><font color="Green"><strong>Latest Works!!!</strong></font>:
-        <p></p>
-    <ul>
-      <li>  <a href="https://arxiv.org/pdf/2309.17014.pdf">FreqAlign: Excavating Perception-oriented Transferability for Blind Image Quality Assessment from A Frequency Perspective</a>. (IEEE TMM 2023) <br> <strong>Xin Li</strong>, Yiting Lu, Zhibo Chen. </li>
-      <li>  <a href="https://arxiv.org/abs/2309.13625"> GraphAdapter: Tuning Vision-Language Models With Dual Knowledge Graph </a>. (NeurIPS2023) <br> <strong>Xin Li</strong>, Dongze Lian, Zhihe Lu, Jiawang Bai, Zhibo Chen*, Xinchao Wang*. </li>
-       <li>  <a href="https://arxiv.org/abs/2308.09388">Diffusion Models for Image Restoration and Enhancement - A Comprehensive Survey</a>. (Arxiv2023) <br> <strong>Xin Li</strong>, Yulin Ren, Xin Jin, Cuiling Lan, Xingrui Wang, Wenjun Zeng, Xinchao Wang, Zhibo Chen. </li>
-       <li>  <a href="https://arxiv.org/pdf/2303.06859.pdf">Learning Distortion Invaraint Representation for Image Restoration from A Causality Perspective</a>. (CVPR2023) <br> <strong>Xin Li</strong>, Bingchen Li, Xin Jin, Cuiling Lan, Zhibo Chen*. </li>
-      <a href="https://github.com/lixinustc/Causal-IR-DIL">Code Release</a>
-       <li> <a href="https://github.com/lixinustc/Enhance-Anything">Enhance-Anything</a> with the pouplar <a href="https://github.com/lixinustc/Enhance-Anything">Segment-anything (SAM)</a> is started to be developed and released.
-
-      <p></p> 
-    </ul>
-        <li><strong>Image/Video Compression</strong>:
-        <p></p>
-    <ul>
-      <li> <a href="https://arxiv.org/abs/2106.03511">Task-driven Semantic Coding via Reinforcement Learning</a>. (IEEE TIP2021) <br> <strong>Xin Li</strong>, Jun Shi, Zhibo Chen*. </li>
-       <a href="https://github.com/lixinustc/Task-driven-Semantic-Coding-via-RL">Code Release</a>
-      <p></p>
-			<li><a href="https://arxiv.org/abs/2012.09550">Learned Block-based Hybrid Image Compression</a>. (IEEE TCSVT2021) <br> Yaojun Wu#, <strong>Xin Li# (Equal Contribution)</strong>#, Zhizheng Zhang, Xin Jin, Zhibo Chen*. </li>
-			<p></p>					 			
-       <li><a href="https://arxiv.org/abs/2208.11529">Hierarchical Reinforcement Learning Based Video Semantic Coding for Segmentation</a>.  (IEEE VCIP2022) <br> Guangqi Xie, <strong>Xin Li</strong>, Shiqi Lin, et al.  </li>
-       <p></p>
-       <li><a href="https://arxiv.org/abs/2208.11673">Learned Lossless JPEG Transcoding via Joint Lossy and Residual Compression</a> (IEEE VCIP2022) <br> Xiaoshuai Fan, <strong>Xin Li</strong>, Zhibo Chen*. </li>
-    </ul>
-     <p></p>
-			 <li><strong>Image/Video Processing/Restoration</strong>:
-			 												 																  <p></p>
-    <ul>
-      <li> <a href="https://arxiv.org/pdf/2111.13078.pdf">Few-Shot Real Image Restoration via Distortion-Relation Guided Transfer Learning</a>. (Preprint) <br> <strong>Xin Li</strong>, Xin Jin, Jun Fu, Xiaoyuan Yu, Bei Tong, Zhibo Chen*. </li>
-      <p></p> 
-      <li><a href="https://arxiv.org/pdf/2208.09885.pdf">HST: Hierarchical Swin Transformer for Compressed Image Super-resolution</a>. (ECCV2022-workshop) <br> Bingchen Li, <strong>Xin Li</strong>, Yiting Lu, et. al..  </li>
-      <a href="https://github.com/lixinustc/HST-for-Compressed-Image-SR">Code Release</a>
-      <p></p>
-			<li><a href="https://arxiv.org/abs/2012.06131" data-clk="hl=zh-CN&sa=T&ei=IYz6X9_3B86Ty9YPrrKhqAQ">Learning Omni-frequency Region-adaptive Representations for Real Image Super-Resolution</a>. (AAAI-2021)<br> <strong>Xin Li</strong>, Xin Jin, Tao Yu, Yingxue Pang, Simeng Sun, Zhizheng Zhang, Zhibo Chen*. </li>
-																	 <p></p>
-      <li><a href="https://ieeexplore.ieee.org/abstract/document/9663408">Dual Prior Learning for Blind and Blended Image Restoration</a>. (TIP2021) <br> Xin Jin, Li Zhang, Chaowei Shan, <strong>Xin Li</strong>, Zhibo Chen* 
-      <p></p>
-      <li><a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123740307.pdf">Learning Disentangled Feature Representation for Hybrid-distorted Image Restoration</a>. (ECCV-2020)<br> <strong>Xin Li</strong>, Xin Jin, Jianxin Lin, Sen Liu, Yaojun Wu, Tao Yu, WeiZhou, Zhibo Chen*.  </li>
-      <p></p>
-      <li><a href="http://challenge.compression.cc/publications/26/">Multi-scale Grouped Dense Network for VVC Intra Coding</a>. (CVPR-Workshop2020)<br> <strong>Xin Li</strong>, Simeng Sun, Zhizheng Zhang, Zhibo Chen*. </li>
-      <p></p>
-      <li> <a href="https://arxiv.org/abs/2009.14547">FAN: Frequency Aggregation Network for Real Image Super-resolution</a>. (ECCV-Workshop 2020) <br> Yingxue Pang#, <strong>Xin Li</strong>#, Xin Jin, Yaojun Wu, Jianzhao Liu, Sen Liu, Zhibo Chen*.</li> （# indicates equal contribution）
-    </ul>  
-    <p></p>
-			 <li><strong>Image/Video Quality Assessment</strong>:
-			 												 				  <p></p>
-      <ul>
-       <li><a href="https://openaccess.thecvf.com/content/CVPR2022W/CLIC/papers/Liu_SwinIQA_Learned_Swin_Distance_for_Compressed_Image_Quality_Assessment_CVPRW_2022_paper.pdf">SwinIQA: Learned Swin Distance for Compressed Image Quality Assessment</a>. (CVPR-Workshop2022) <br> Jianzhao Liu, <strong>Xin Li</strong>, Yanding Peng, Tao Yu, Zhibo Chen*. </li>
-       <a href="https://github.com/lixinustc/SwinIQA">Code Release</a>
-       <p></p>
-			 <li> RTN: Reinforced Transformer Network for Coronary CT Angiography Vessel-level Image Quality Assessment</a>. (MICCAI2022)<br> Yiting Lu, Jun Fu, <strong>Xin Li</strong>, et al. </li>
-      </ul>
-      <p></p>
-			<li><strong>Image/Video Quality Assessment & Generalization</strong>:
-      <p></p>
-      <ul>
-      <li> <a href="https://arxiv.org/abs/2207.14489">StyleAM: Perception-Oriented Unsupervised Domain Adaption for Non-reference Image Quality Assessment</a>. (Arxiv version) <br> Yiting Lu#, <strong>Xin Li</strong># (Eqaul contribution), Jianzhao Liu, Zhibo Chen*</li>
-      <p></p>
-			<li><a href="https://arxiv.org/pdf/2104.14115.pdf">LIQA: Lifelong Blind Image Quality Assessment</a>. (TMM2022)<br> Jianzhao Liu, Wei Zhou, <strong>Xin Li</strong>, Jiahua Xu, Shukun An, Zhibo Chen* 
-      <p></p>
-			<li><a href="https://arxiv.org/abs/2207.08124">Source-free Unsupervised Domain Adaptation for Blind Image Quality Assessment</a>. (Arxiv version) <br> Jianzhao Liu#, <strong>Xin Li</strong># (Equal Contribution), Shukun An, Zhibo Chen* </li>
-      </ul>
-    <p></p>
-      <li><strong>Image/Video Processing & Generalization</strong>
-      <p></p>
-      <ul>
-      		<li> <a href="https://arxiv.org/abs/2008.08242">LIRA: Lifelong Image Restoration from Unknown Blended Distortions</a>. (ECCV2020) <br> JianZhao Liu, Jianxin Lin, <strong>Xin Li</strong>, WeiZhou, Sen Liu, Zhibo Chen*.</li>  
-      </ul>
-    <p></p>
-      <li> <strong>Causal Learning & Generalization & Data augmentation </strong>
-      <p></p>
-      <ul>
-      <li> <a href="https://arxiv.org/abs/2111.13420">Confounder Identification-free Causal Visual Feature Learning</a>. (Arxiv version)<br> <strong>Xin Li</strong>, Zhizheng Zhang*, Guoqiang We, Cuiling Lan*, Wenjun Zeng, Xin Jin, Zhibo Chen*. </li>
-      <li> <a href="https://arxiv.org/abs/2112.02862">SelectAugment: Hierarchical Deterministic Sample Selection for Data Augmentation</a>. (AAAI2023 Oral) <br> Shiqi Lin, ZhiZheng Zhang, <strong>Xin Li</strong>, Wenjun Zeng, Zhibo Chen*.</li>
-      </ul>
-  </li>
-</ul>
+  </div>
+</nav>
 
 
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">KVQ: Kaleidoscope Video Quality Assessment for Short-form Video</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="">Yiting Lu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="">Xin Li</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="h">Yajing Pei</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Kun Yuan</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Qizhi Xie</a><sup>2,3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Yunpeng Qu</a><sup>2,3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Ming Sun</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="">Chao Zhou</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="">Zhibo Chen</a><sup>1</sup>
+            </span>
+          </div>
 
-<p><strong>Academic Services</strong></p>
-<ul>
-  <li> Invited as a reviewer/PC member for conferences, including ECCV2024, ICML2024, CVPR2024, ICLR2024, AAAI2024, NeurIPS2023, ICCV2023, ICLR2023 workshop, CVPR2023, AAAI2023, CVPR2022, ECCV2022,  VCIP2020, VCIP2021, VCIP2022,  
-    and journals, including TIP, TNNLS, TMM, TCSVT, JSAC.
-  </li>
-</ul>
-<p><strong>Competitions</strong></p>
-<ul>
-  <li>The first prize in the 5th Workshop and Challenge on Learned Image Compression (Perceptual Metric Track) (CVPR-CLIC2022).</li>
-  <li>The third prize in the 2019 4K+HDR National Artificial Intelligence Competition.(<font color="#FF0000">3/1000+</font>)</li>
-  <li>The third prize in the NTIRE2020 video deblurring task.</li>
-</ul>
-<p><strong>Awards</strong></p>
-<ul>
-  <li>Bytedance Scholarship 2022 (<font color="#FF0000">Ten students in China</font>)</li>
-  <li>China Scholarship Council (CSC) scholarship
-  <li>China National Scholarship for Graduate Student (2021)</li>
-  <li>NeurIPS Scholar Award, 2023
-</ul>
-<p><strong>Research Experience</strong></p>
-<ul>
-  <li> Sept. 2019 - Present: Ph.D. Candidate, MOE-Microsoft Key Laboratory of Multimedia Computing and Communication, Mentor: <a href="https://scholar.google.com/citations?user=1ayDJfsAAAAJ&hl=zh-CN">Zhibo Chen</a>. </li>
-  <li> Apr. 2021 - Apr. 2022: Research Intern,  Intelligent Multimedia Group, Microsoft Research Asia, Mentor: <a href="https://scholar.google.com/citations?user=XZugqiwAAAAJ&hl=zh-CN">Cuiling Lan</a> and <a href="https://scholar.google.com/citations?user=_cUfvYQAAAAJ&hl=zh-CN">Wenjun Zeng</a>.</li>
-  <li> Jan. 2023 - ： CSC Visiting Ph.D., LV label, NUS, Mentor: <a href=https://scholar.google.com/citations?user=w69Buq0AAAAJ&hl=en>Xinchao Wang</a>.</li>  
-</ul>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Science and Technology of China,</span>
+            <span class="author-block"><sup>2</sup>Kuaishou Technology</span>
+            <span class="author-block"><sup>2</sup>Tsinghua University</span>
+          </div>
 
-      </td>
-    </tr>
-  </tbody></table>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2402.07220"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2402.07220"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section> -->
 
 
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
 
-</body></html>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Short-form UGC video platforms, like Kwai and TikTok, have been an emerging and irreplaceable mainstream media form, thriving on user-friendly engagement, and kaleidoscope creation, etc. However, the advancing content-generation modes, e.g., special effects, and sophisticated processing workflows, e.g., de-artifacts, have introduced significant challenges to recent UGC video quality assessment: (i) the ambiguous contents hinder the identification of quality-determined regions. (ii) the diverse and complicated hybrid distortions are hard to distinguish. To tackle the above challenges and assist in the development of short-form videos, we establish the first large-scale Kaleidoscope short Video database for Quality assessment, termed KVQ, which comprises 600 user-uploaded short videos and 3600 processed videos through the diverse practical processing workflows, including pre-processing, transcoding, and enhancement. Among them, the absolute quality score of each video and partial ranking score among indistinguishable samples are provided by a team of professional researchers specializing in image processing. Based on this database, we propose the first short-form video quality evaluator, i.e., KSVQE, which enables the quality evaluator to identify the quality-determined semantics with the content understanding of large vision language models (i.e., CLIP) and distinguish the distortions with the distortion understanding module. Experimental results have shown the effectiveness of KSVQE on our KVQ database and popular VQA databases.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<!-- <!-
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!- Visual Effects.
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Dataset Description and Links</h2>
+          <p>
+           < Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall. -->
+ <!--          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div> -->
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+    <!--   <div class="column">
+        <h2 class="title is-3">Matting</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              As a byproduct of our method, we can also solve the matting problem by ignoring
+              samples that fall outside of a bounding box during rendering.
+            </p>
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/matting.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+    <!--/ Matting. -->
+
+    <!-- Animation. -->
+    <!-- <div class="columns is-centered"> -->
+     <!--  <div class="column is-full-width">
+        <h2 class="title is-3">Animation</h2>
+ -->
+        <!-- Interpolating. -->
+      <!--   <h3 class="title is-4">Interpolating states</h3>
+        <div class="content has-text-justified">
+          <p> -->
+        <!--     We can also animate the scene by interpolating the deformation latent codes of two input
+            frames. Use the slider here to linearly interpolate between the left frame and the right
+            frame. -->
+          <!-- </p> -->
+        <!-- </div> -->
+        <!-- <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_start.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Start Frame</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_end.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">End Frame</p>
+          </div>
+        </div>
+        <br/> -->
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+       <!--  <h3 class="title is-4">Re-rendering the input video</h3>
+        <div class="content has-text-justified">
+          <p>
+            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
+            viewpoint such as a stabilized camera by playing back the training deformations.
+          </p>
+        </div> -->
+        <!-- <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/replay.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+        <!--/ Re-rendering. -->
+
+      <!-- </div> -->
+    <!-- </div> -->
+    <!--/ Animation. -->
+
+
+    <!-- Concurrent Work. -->
+<!--     <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            There's a lot of excellent work that was introduced around the same time as ours.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+          </p>
+          <p>
+            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
+            both use deformation fields to model non-rigid scenes.
+          </p>
+          <p>
+            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+          </p>
+          <p>
+            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    / Concurrent Work. -->
+
+ <!--  </div> -->
+<!-- </section>  -->
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{lu2024kvq,
+  title={KVQ: Kaleidoscope Video Quality Assessment for Short-form Videos},
+  author={Lu, Yiting and Li, Xin and Pei, Yajing and Yuan, Kun and Xie, Qizhi and Qu, Yunpeng and Sun, Ming and Zhou, Chao and Chen, Zhibo},
+  journal={arXiv preprint arXiv:2402.07220},
+  year={2024}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website adapted from the following <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
